@@ -148,52 +148,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Environment
-Specifies the Azure environment.
-The acceptable values for this parameter are: AzureCloud and AzureChinaCloud.
-For more information, type `Get-Help Get-AzEnvironment`.
-
-```yaml
-Type: System.String
-Parameter Sets: AccountNameAndKeyEnvironment, AnonymousAccountEnvironment
-Aliases: Name, EnvironmentName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: System.String
-Parameter Sets: SasTokenWithAzureEnvironment, OAuthAccountEnvironment
-Aliases: Name, EnvironmentName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Local
-Indicates that this cmdlet creates a context by using the local development Atlas instance.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: LocalDevelopment
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Protocol
-Transfer Protocol (https/http).
+Specfy the transfer protocol: Options are 'http' or 'https'.
+If -Protocol is omitted, then https is assumed.
 
 ```yaml
 Type: System.String
@@ -239,22 +196,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StorageAccountName
-Specifies an Apache Atlas account name.
-This cmdlet creates a context for the account that this parameter specifies.
-
-```yaml
-Type: System.String
-Parameter Sets: OAuthAccount, AccountNameAndKey, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment, SasToken, SasTokenWithAzureEnvironment, OAuthAccountEnvironment
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UseConnectedAccount
 Indicates that this cmdlet creates an Apache Atlas context with OAuth (Azure AD) Authentication.
 The cmdlet will use OAuth Authentication by default, when other authentication not specified.
@@ -272,7 +213,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable,
+-Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -280,13 +224,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.WindowsAzure.Commands.Storage.AzureStorageContext
+### Atlas.AtlasStorageContext
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-AtlasBlob](./Get-AtlasBlob.md)
 
-[New-AtlasContainerSASToken](./New-AtlasContainerSASToken.md)
 
