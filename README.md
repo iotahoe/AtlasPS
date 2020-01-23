@@ -29,7 +29,7 @@ Join the conversation on TBD.
 
 ### Installation
 
-Install AtlasPS from the [PowerShell Gallery]! `Install-Module` requires PowerShellGet (included in PS v5, or download for v3/v4 via the gallery link)
+Install AtlasPS from the [PowerShell Gallery]! `Install-Module` requires PowerShellGet (included in PS v5)
 
 ```powershell
 # One time only install:
@@ -70,8 +70,6 @@ Check out our guidelines on [Contributing] to our modules and documentation.
 
 |Configuration|Status|
 |-------------|------|
-|Windows Powershell v3||
-|Windows Powershell v4||
 |Windows Powershell v5.1|[![Build Status](https://img.shields.io/vso/build/AtlassianPS/AtlasPS/11/master.svg?style=for-the-badge)](https://dev.azure.com/AtlassianPS/AtlasPS/_build/latest?definitionId=11)|
 |Powershell Core (latest) on Windows|[![Build Status](https://img.shields.io/vso/build/AtlassianPS/AtlasPS/11/master.svg?style=for-the-badge)](https://dev.azure.com/AtlassianPS/AtlasPS/_build/latest?definitionId=11)|
 |Powershell Core (latest) on Ubuntu|[![Build Status](https://img.shields.io/vso/build/AtlassianPS/AtlasPS/11/master.svg?style=for-the-badge)](https://dev.azure.com/AtlassianPS/AtlasPS/_build/latest?definitionId=11)|
